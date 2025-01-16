@@ -1,0 +1,97 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background-color: #000; /* Siyah arka plan */
+    color: #fff; /* Beyaz yazı rengi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Form arka planını daha koyu yaparak kontrast oluşturuyoruz */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    width: 100%; /* Form genişliğini yüzde 100 yaparak sayfaya ortalamak */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Formu ortalamak */
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff; /* Başlık rengi beyaz */
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #ddd; /* Etiket rengi açık gri */
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #fff; /* Input arka planını beyaz yapıyoruz */
+    border: 1px solid #ccc; /* Input kenarlıkları açık gri */
+    color: #000; /* Input metni siyah */
+    border-radius: 5px;
+}
+
+    input[type="file"] {
+        background-color: #fff; /* Dosya seçme butonu arka planı beyaz */
+        border: 1px solid #ccc;
+    }
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #007bff; /* Buton arka planı mavi */
+    color: #fff; /* Buton yazı rengi beyaz */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #0056b3; /* Buton hover rengi daha koyu mavi */
+    }
+
+textarea {
+    height: 120px;
+    resize: vertical; /* Textarea boyutunu dikey olarak değiştirmeye izin verir */
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}

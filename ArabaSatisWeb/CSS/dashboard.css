@@ -1,0 +1,118 @@
+﻿/* Tüm sayfa için varsayılan stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Dashboard sayfası için arka plan siyah */
+body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+    position: relative;
+    background-color: #000; /* Arka plan siyah */
+    color: #f9f9f9; /* Yazı rengi beyaz */
+}
+
+    /* Arka plan için overlay */
+    body::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black; /* Arka plan siyah */
+        background-position: center;
+        background-size: cover;
+        z-index: -1; /* İçerik ön planda kalır */
+    }
+
+/* Navbar stil */
+.navbar {
+    position: fixed; /* Navbar'ı sabitlemek için */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Koyu renk navbar */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000; /* Navbar'ın diğer içeriklerin üstünde olması için yüksek z-index */
+}
+
+/* Dashboard container stili */
+.admin-dashboard-container {
+    width: 80%;
+    margin: 100px auto 20px; /* Margin-top değerini artırarak navbar'ın altına kaymasını sağlarız */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Şeffaf beyaz */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Hafif beyaz gölge */
+    backdrop-filter: blur(8px); /* Bulanıklık efekti */
+    -webkit-backdrop-filter: blur(8px); /* Safari desteği */
+}
+
+    /* Başlık rengi ve hizalaması */
+    .admin-dashboard-container h1 {
+        text-align: center;
+        color: #fff; /* Beyaz renk */
+    }
+
+/* Araba listesi için container */
+.car-list-container {
+    margin-top: 30px;
+}
+
+/* Tablo stilini düzenleme */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Tablo hücreleri stilini düzenleme */
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Tablo başlıkları */
+th {
+    background-color: #4CAF50; /* Yeşil başlık */
+    color: white;
+}
+
+/* Butonlar için ortak stil */
+.btn {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Onay butonu */
+.btn-approve {
+    background-color: #4CAF50; /* Yeşil onay butonu */
+    color: white;
+}
+
+/* Reddet butonu */
+.btn-reject {
+    background-color: #f44336; /* Kırmızı reddet butonu */
+    color: white;
+}
+
+/* Buton üzerine gelindiğinde renk değişimi */
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Buton odaklanma stilini kaldırma */
+button:focus {
+    outline: none;
+}

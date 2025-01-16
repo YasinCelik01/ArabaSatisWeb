@@ -1,0 +1,76 @@
+﻿/* Navbar için özgün stil */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+    .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar .logo a {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .navbar .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+        .navbar .nav-links li {
+            margin-left: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+
+            .navbar .nav-links a:hover {
+                background-color: #575757;
+                border-radius: 4px;
+            }
+
+    .navbar .login-button {
+        background-color: #007bff;
+        padding: 8px 16px;
+        border-radius: 4px;
+    }
+
+    .navbar .register-button {
+        background-color: #28a745;
+        padding: 8px 16px;
+        border-radius: 4px;
+    }
+
+    .navbar .logout-button {
+        background-color: #dc3545;
+        padding: 8px 16px;
+        border-radius: 4px;
+    }
+
+    .navbar .profile-button {
+        background-color: #ffc107;
+        padding: 8px 16px;
+        border-radius: 4px;
+    }
+
+    /* Navbar'da aktif olan linki vurgulamak için */
+    .navbar .nav-links li.active a {
+        background-color: #007bff;
+        border-radius: 4px;
+    }

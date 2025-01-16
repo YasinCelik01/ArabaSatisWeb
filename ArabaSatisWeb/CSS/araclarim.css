@@ -1,0 +1,90 @@
+﻿/* Araçlarım sayfasına özel CSS */
+.cars-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+    .cars-container h1 {
+        font-size: 32px;
+        color: #333;
+        text-align: center;
+        margin-top: 100px; /* Navbar ile çakışmayı engellemek için üst boşluk */
+        margin-bottom: 20px;
+    }
+
+#carsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.car-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .car-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+.car-header h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.car-header p {
+    font-size: 14px;
+    color: #555;
+}
+.car-photos img {
+    width: 300px; /* Genişliği 300 piksel olarak ayarlar */
+    height: auto; /* Oranı korur */
+    max-width: 100%; /* Konteynerin dışına taşmasını engeller */
+}
+
+.car-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.car-description h4 {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.car-description p {
+    font-size: 14px;
+    color: #555;
+}
+
+.car-footer p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+    .car-footer p strong {
+        color: #333;
+    }
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .cars-container {
+        padding: 10px;
+    }
+
+    .car-item {
+        width: 100%;
+    }
+}

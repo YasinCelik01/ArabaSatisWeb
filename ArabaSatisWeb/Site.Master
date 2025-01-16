@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ArabaSatisWeb.Site" %>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Örneği</title>
+    <link rel="stylesheet" href="../CSS/Navbar.css">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Araba Satış</a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="anasayfa.aspx">Anasayfa</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+                <li id="loginButton"><a href="login.aspx" class="login-button">Login</a></li>
+                <li id="registerButton"><a href="register.aspx" class="register-button">Register</a></li>
+                <li id="logoutButton"><a href="anasayfa.aspx" onclick="logoutUser()" class="logout-button">Logout</a></li>
+                <li id="profileButton"><a href="profile.aspx" class="profile-button">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <script>
+        
+        function checkLoginStatus() {
+            const authToken = document.cookie.split('; ').find(row => row.startsWith('authToken='));
+
+            if (authToken) {
+                
+                document.getElementById('loginButton').style.display = 'none';
+                document.getElementById('registerButton').style.display = 'none';
+                document.getElementById('logoutButton').style.display = 'inline-block';
+                document.getElementById('profileButton').style.display = 'inline-block';
+            } else {
+                
+                document.getElementById('loginButton').style.display = 'inline-block';
+                document.getElementById('registerButton').style.display = 'inline-block';
+                document.getElementById('logoutButton').style.display = 'none';
+                document.getElementById('profileButton').style.display = 'none';
+            }
+        }
+
+        
+        function logoutUser() {
+            document.cookie = "authToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; Secure;";
+            alert('Başarıyla çıkış yapıldı.');
+            window.location.href = "anasayfa.aspx"; 
+        }
+
+        window.onload = checkLoginStatus;
+    </script>
+</body>
+</html>
